@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import eu.hansolo.tilesfx.addons.Switch?>
+
+<GridPane fx:controller="com.example.intersectionapp.HelloController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <Label text="Länge Liste A: "
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="sizeListA"
+               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Länge Liste B: "
+               GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="sizeListB"
+               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Liste im HashSet"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Label text="Welche Liste als HashSet?  A"
+           GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+    <Switch fx:id="SwitchAorB" prefHeight="10" prefWidth="10"
+            GridPane.columnIndex="1" GridPane.rowIndex="4"> </Switch>
+    <Label text="B"
+           GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+
+    <Button text="Start!" onAction="#onHelloButtonClick"
+            GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+    <TextArea fx:id="ListAContent" text="1, 2, 3" editable="false"
+              GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <TextArea fx:id="ListBContent" text="3, 4, 5" editable="false"
+              GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <TextArea fx:id="ListIntersectionContent" text="6, 7, 8" editable="false"
+              GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+
+    <Label fx:id="ExecutionTimeLabel" text="Execution time: "
+           GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+
+</GridPane >
